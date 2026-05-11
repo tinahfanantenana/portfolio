@@ -1,21 +1,23 @@
-const onRead=function(){
-    new Carousel(document.querySelector('.carousel1'),{
-        slideToScroll:2,
-        slideVisible: 3,
-        infinite:true,
-        pagination:true
-    })
+import {fetchPage} from '../services/fetchPage.js';
+import { activeMenu } from './utils/activeMenu.js';
+import { contactForm } from './public/components/contactForm.js';
 
-    new Carousel(document.querySelector('.carousel2'),{
-        slideToScroll:2,
-        slideVisible: 2,
-        pagination:true
-    })
-
-    new Carousel(document.querySelector('.carousel3'),{
-    })
-}
+const container= document.querySelector(".container");
 
 
+//Délégation de l'evenement sur chaque lien cliqué
+document.addEventListener('click',(e)=>{
+    const link = e.target.closest('a[data-page]');
+    
+    if (!link) return ;
 
-document.addEventListener('DOMContentLoaded', onRead) 
+    e.preventDefault();
+
+    const page=link.dataset.page;
+
+    activeMenu(page);
+    fetchPage(container,page);
+})
+activeMenu('accueil');
+fetchPage(container,'accueil');
+

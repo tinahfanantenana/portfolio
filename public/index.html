@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./asset/styles/bootstrap.min.css">
     <link rel="stylesheet" href="./asset/styles/style.css">
     <title>Document</title>
+    <script type="module" src="../main.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -19,17 +20,20 @@
             <div class="collapse navbar-collapse " id="navbarText">
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0 text-center text-md-start">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link link-menu" href="#" data-page="accueil">Accueil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link link-menu" href="#" data-page="aPropos">À propos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link link-menu" href="#" data-page="competence">Compétence</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-menu" href="#" data-page="portfolio">Portfolio</a>
                   </li>
                 </ul>
                 <div class="d-grid d-md-block mt-3 mt-md-0 ms-md-3">
-                <a class="btn btn-outline-secondary rounded-pill" href="#">
+                <a class="btn btn-outline-secondary rounded-pill link-menu" href="#"  data-page="contact">
                   Contact
                 </a>
                 </div>
@@ -37,7 +41,7 @@
         </div>
     </nav>
     <div class="container">
-
+        
     </div>
     <script src="./asset/js/bootstrap.bundle.min.js"></script>
 </body>
